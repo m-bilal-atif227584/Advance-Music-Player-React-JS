@@ -150,15 +150,6 @@ function App() {
 
   const vidArray = ['./Assets/Videos/video1.mp4','./Assets/Videos/video2.mp4','./Assets/Videos/video3.mp4','./Assets/Videos/video4.mp4','./Assets/Videos/video5.mp4','./Assets/Videos/video6.mp4'];
 
-  const handleChangeBackground = ()=>{
-    if (videoIndex >= vidArray.length - 1) {
-      setVideoIndex(0);
-    }else{
-      setVideoIndex(videoIndex + 1)
-    }
-  }
-
-
   return (
     <>
     <div className="container">
@@ -181,9 +172,11 @@ function App() {
           <i className='fa-solid fa-forward musicControler' onClick={handleNextSong}></i>
         </div>
       </div>
+      <a href='https://www.profitableratecpm.com/v6rs5xpc?key=69044931026a6f42f659f50fda1899ea'>
       <div className="changeBackBtn" onClick={handleChangeBackground}>
         Change Background
       </div>
+      </a>
     </div>
     </>
   );
