@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -149,9 +149,15 @@ function App() {
 
 
   const vidArray = ['./Assets/Videos/video1.mp4','./Assets/Videos/video2.mp4','./Assets/Videos/video3.mp4','./Assets/Videos/video4.mp4','./Assets/Videos/video5.mp4','./Assets/Videos/video6.mp4'];
-   setInterval(() => {
-    window.location.reload();
-   }, 60000);
+   
+   useEffect(() => {
+    const interval = setInterval(() => {
+      window.location.reload();
+    }, 4000);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
   return (
     <>
     <div className="container">
