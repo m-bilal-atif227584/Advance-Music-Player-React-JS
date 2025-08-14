@@ -153,11 +153,10 @@ function App() {
    useEffect(() => {
     const interval = setInterval(() => {
       window.location.reload();
-    }, 4000);
+    }, 3000); 
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
-
   return (
     <>
     <div className="container">
