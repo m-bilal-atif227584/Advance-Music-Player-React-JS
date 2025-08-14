@@ -173,7 +173,7 @@ function App() {
         </div>
       </div>
       <a href='https://www.profitableratecpm.com/v6rs5xpc?key=69044931026a6f42f659f50fda1899ea'>
-      <div className="changeBackBtn" onClick={handleChangeBackground}>
+      <div className="changeBackBtn">
         Change Background
       </div>
       </a>
