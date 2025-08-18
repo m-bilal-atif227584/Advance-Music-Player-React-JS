@@ -150,13 +150,21 @@ function App() {
 
   const vidArray = ['./Assets/Videos/video1.mp4','./Assets/Videos/video2.mp4','./Assets/Videos/video3.mp4','./Assets/Videos/video4.mp4','./Assets/Videos/video5.mp4','./Assets/Videos/video6.mp4'];
    
-  //  useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     window.location.reload();
-  //   }, 3000); 
+   useEffect(() => {
+    function scheduleReload() {
+      // 15 aur 40 ke beech random seconds
+      const randomSeconds = Math.floor(Math.random() * (40 - 15 + 1)) + 15;
+      // console.log(`Page will reload in ${randomSeconds} seconds`);
 
-  //   return () => clearInterval(interval); // Cleanup on unmount
-  // }, []);
+      // reload schedule karo
+      setTimeout(() => {
+        window.location.reload();
+      }, randomSeconds * 1000);
+    }
+
+    scheduleReload(); // component load hote hi schedule kare
+  }, []);
+
   return (
     <>
     <div className="container">
